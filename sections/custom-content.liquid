@@ -1,0 +1,58 @@
+<h2>{{ section.settings.title }}</h2>
+
+{% for block in section.blocks %}  
+  {% case block.type %}
+    {% when 'liquid' %}  
+      <div {{ block.shopify_attributes }}>   
+        {{ block.settings.liquid }}
+      </div>
+    {% when 'custom-text' %}
+      <div {{ block.shopify_attributes }}>
+        {{ block.settings.custom-text-field }}
+      </div>       
+  {% endcase %} 
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Custom Content",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Custom content heading",
+        "default": "Title"
+      }    
+    ],
+    "blocks": [
+      {
+        "name": "Custom Liquid",
+        "type": "liquid",
+        "settings": [
+          {
+            "type": "liquid",
+            "id": "liquid",
+            "label": "Custom Liquid",
+            "info": "Add Liquid code to create theme customizations."
+          }
+        ]
+      },
+      {
+        "name": "Custom Text",
+        "type": "custom-text",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "custom-text-field",
+            "label": "Text"
+          }
+        ]
+      }
+    ],      
+    "presets": [
+      {
+        "name": "Custom Content"
+      }
+    ]
+  }
+{% endschema %}
