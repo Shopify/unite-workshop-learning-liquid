@@ -1,11 +1,12 @@
 # Shopify Unite '22 Learning Liquid through building Shopify Theme Sections
 
-Hello and welcome to the **Learning Liquid through building Shopify Theme Sections** workshop for Shopify Unite '22.
+Hello and welcome to the [**Learning Liquid through building Shopify Theme Sections**](https://shopify.github.io/workshops/codelabs/learning-liquid/index.html?index=./workshops) workshop for Shopify Unite '22.
 
 This repo is where you can find the final state of the customized Dawn theme used in the workshop.
 
 ### Before you begin
-Prior to joining the Workshop, we recommend that you...
+
+Prior to joining the workshop, we recommend that you...
 
 1. Create a [Shopify Partner account](https://www.shopify.com/partners) (if you have not done already).
 2. Create a Dev store within your Partner account.
